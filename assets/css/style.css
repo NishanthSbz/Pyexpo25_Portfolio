@@ -743,11 +743,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 # About Section
 --------------------------------------------------------------*/
 #about {
-  background: linear-gradient(135deg, #1d1f21 0%, #0f0f10 100%);
-  
+  /* background: linear-gradient(135deg, #1d1f21 0%, #0f0f10 100%); */
+  background: black;
+  padding: 50px 0;
   color: #fff;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
