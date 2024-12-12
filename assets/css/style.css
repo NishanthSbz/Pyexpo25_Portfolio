@@ -768,7 +768,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 3rem;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
-  color: #f82249;
+  color: #fff;
   text-transform: uppercase;
   margin-bottom: 20px;
   position: relative;
@@ -974,6 +974,142 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 15px;
   margin-bottom: 10px;
 }
+
+/* -------------------------------------------------------------------
+# Hack domain style 
+-----------------------------------------------------------------------*/
+/* General Section Styling */
+#domain {
+  width: 100%;
+  height: auto;
+  border:1px solid red;
+  background-color: #040919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:50px 0;
+}
+
+#domain .container-fluid {
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#domain .domain-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+}
+
+#domain .domain-heading p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+#domain .domain-body {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card Styling */
+.card-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #1c1f29;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.cards:hover {
+  transform: translateY(-10px);
+}
+
+.cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cards:hover img {
+  filter: brightness(50%);
+}
+
+.card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: height 0.4s ease-in-out;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 35px 0 10px 0;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.cards:hover .card-body {
+  height: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #domain .domain-body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-body {
+    height: 50% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #domain .domain-body {
+    grid-template-columns: 1fr;
+  }
+
+  .card-body {
+    height: 50% !important;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Schedule Section
